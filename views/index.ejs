@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Servidor Minecraft</title>
+  <style>
+    body {
+      background: #1e1e2f;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 { color: #00FFAA; }
+    .server-ip {
+      background: #2c2c3e;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #00FFAA;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 Mi Servidor Minecraft Bedrock</h1>
+  <p>¡Servidor activo las 24/7!</p>
+
+  <div class="server-ip">
+    <p><strong>Dirección:</strong> abcd1234.serveo.net</p>
+    <p><strong>Puerto:</strong> 19132</p>
+  </div>
+
+  <button onclick="copyIP()">Copiar IP</button>
+
+  <footer style="margin-top: 2rem;">
+    <p>Usa esta dirección en tu app de Minecraft</p>
+  </footer>
+
+  <script>
+    function copyIP() {
+      const ip = 'abcd1234.serveo.net:19132';
+      navigator.clipboard.writeText(ip).then(() => {
+        alert('✅ IP copiada al portapapeles: ' + ip);
+      });
+    }
+  </script>
+</body>
+</html>
